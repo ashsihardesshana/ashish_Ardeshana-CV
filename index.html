@@ -1,389 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashish Ardeshana — UI/UX Designer &amp; Front-end Developer</title>
-<meta name="description" content="Ashish Ardeshana — UI/UX Designer & Front-end Developer. 10+ years experience, 150+ projects delivered.">
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Bootstrap 5 -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Custom styles -->
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<!-- =============================================
-     SVG SPRITE — all line icons defined once, reused via <use>
-     Keeps markup light and avoids repeated image requests
-============================================== -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></symbol>
-  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3.5h3.6l1.6 4.6-2.2 1.9a13 13 0 0 0 6.5 6.5l1.9-2.2 4.6 1.6v3.6c0 1-.9 1.9-1.9 1.8-8-.6-14.3-6.9-14.9-14.9-.1-1 .8-1.9 1.8-1.9Z"/></symbol>
-  <symbol id="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
-  <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.6v.1M11.5 16.5v-3.6c0-1.4 1-2.4 2.4-2.4s2.1 1 2.1 2.4v3.6"/></symbol>
-  <symbol id="icon-behance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h6.2c2.6 0 2.6 3.6 0 3.6H3zM3 10.6h6.7c3 0 3 4.4 0 4.4H3z"/><path d="M14.5 13.2c0-2.2 1.7-3.6 3.7-3.6s3.6 1.3 3.6 3.6v.5h-6.1c.1 1.4 1.1 2.2 2.5 2.2 1 0 1.7-.4 2.1-1l1.3.9c-.7 1.1-1.9 1.7-3.4 1.7-2.3 0-3.7-1.6-3.7-3.7Z"/><path d="M15.6 7.4h4.8"/></symbol>
-  <symbol id="icon-dribbble" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M4 10.3c4.8 1.4 10 1.2 15.2-.6M5.3 17c2.6-4.8 6.2-8 11.6-9.9M8.3 4.2c3 3.9 4.9 8.7 5.5 14.5"/></symbol>
-  <symbol id="icon-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.6-.2.6-.5v-1.8c-2.6.6-3.2-1.2-3.2-1.2-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.1-.2-4.3-1-4.3-4.6 0-1 .4-1.9 1-2.5-.1-.2-.4-1.2.1-2.5 0 0 .8-.3 2.7 1a9 9 0 0 1 4.9 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.5.6.6 1 1.5 1 2.5 0 3.6-2.2 4.4-4.3 4.6.4.3.7.9.7 1.9v2.8c0 .3.1.6.6.5A9.5 9.5 0 0 0 12 2.5Z"/></symbol>
-  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></symbol>
-  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></symbol>
-  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
-  <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c-5 0-8.5 3.3-8.5 7.5 0 2.2 1 4.1 2.6 5.5-.2 1.1-.7 2.2-1.5 3.1 1.5 0 3-.5 4.2-1.4.9.3 1.9.4 3 .4 5 0 8.7-3.3 8.7-7.6 0-4.2-3.5-7.5-8.5-7.5Z"/></symbol>
-  <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1Z"/></symbol>
-  <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.2" r="3.4"/><path d="M4.8 20c1-3.6 3.8-5.5 7.2-5.5s6.2 1.9 7.2 5.5"/></symbol>
-  <symbol id="icon-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12" rx="2"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5M3 12.5h18"/></symbol>
-  <symbol id="icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.4"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.4"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.4"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.4"/></symbol>
-  <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5M3.5 16.5 12 21l8.5-4.5"/></symbol>
-  <symbol id="icon-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6.5a1.5 1.5 0 0 1 1.5-1.5h4l2 2.2h8a1.5 1.5 0 0 1 1.5 1.5v8.8a1.5 1.5 0 0 1-1.5 1.5H5a1.5 1.5 0 0 1-1.5-1.5Z"/></symbol>
-</svg>
-
-<!-- =============================================
-     FLOATING SIDE NAV — quick jump + scroll-spy highlight
-============================================== -->
-<nav class="side-nav" aria-label="Section navigation">
-  <a href="#home" class="side-nav__link is-active" data-nav="home" aria-label="Home">
-    <svg width="18" height="18" aria-hidden="true"><use href="#icon-chat"/></svg>
-  </a>
-  <a href="#about" class="side-nav__link" data-nav="about" aria-label="About me">
-    <svg width="18" height="18" aria-hidden="true"><use href="#icon-user"/></svg>
-  </a>
-  <a href="#resume" class="side-nav__link" data-nav="resume" aria-label="Resume">
-    <svg width="18" height="18" aria-hidden="true"><use href="#icon-briefcase"/></svg>
-  </a>
-  <a href="#services" class="side-nav__link" data-nav="services" aria-label="Services">
-    <svg width="18" height="18" aria-hidden="true"><use href="#icon-grid"/></svg>
-  </a>
-  <a href="#skills" class="side-nav__link" data-nav="skills" aria-label="Skills">
-    <svg width="18" height="18" aria-hidden="true"><use href="#icon-layers"/></svg>
-  </a>
-  <a href="#portfolio" class="side-nav__link" data-nav="portfolio" aria-label="Portfolio">
-    <svg width="18" height="18" aria-hidden="true"><use href="#icon-folder"/></svg>
-  </a>
-</nav>
-
-<div class="page-shell">
-  <div class="container-fluid">
-    <div class="row gx-0 gx-xl-5">
-
-      <!-- =============================================
-           SIDEBAR — sticky profile card
-      ============================================== -->
-      <aside class="col-lg-3 sidebar-col">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ashish Ardeshana — UI/UX Designer & Front-end Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="profile-sidebar reveal">
         <div class="profile-card">
-          <div class="profile-card__head">
-            <h1 class="profile-card__name">Ashish</h1>
-            <p class="profile-card__role">UI/UX Designer &amp;<br>Front-end Developer</p>
+          <div class="profile-head">
+            <strong>Ashish</strong
+            ><span>UI/UX Designer &amp;<br />Front-end Developer</span>
           </div>
-
-          <div class="profile-card__photo" role="img" aria-label="Portrait of Ashish Ardeshana">
-            <!-- Replace this placeholder with /assets/images/profile.jpg -->
-            <span class="profile-card__initials">AA</span>
+          <div class="profile-photo">
+            <img src="assets/images/Ashish.jpg" alt="Ashish Ardeshana" />
           </div>
-
-          <ul class="profile-card__contact list-unstyled">
-            <li>
-              <svg width="16" height="16" aria-hidden="true"><use href="#icon-mail"/></svg>
-              <a href="mailto:ashishardeshana9@gmail.com">ashishardeshana9@gmail.com</a>
-            </li>
-            <li>
-              <svg width="16" height="16" aria-hidden="true"><use href="#icon-phone"/></svg>
-              <a href="tel:+919723071085">+91 9723071085</a>
-            </li>
-            <li>
-              <svg width="16" height="16" aria-hidden="true"><use href="#icon-location"/></svg>
-              <span>Ahmedabad, Gujarat, India</span>
-            </li>
-          </ul>
-
-          <ul class="profile-card__social list-unstyled">
-            <li><a href="#" aria-label="LinkedIn profile"><svg width="16" height="16" aria-hidden="true"><use href="#icon-linkedin"/></svg></a></li>
-            <li><a href="#" aria-label="Behance profile"><svg width="16" height="16" aria-hidden="true"><use href="#icon-behance"/></svg></a></li>
-            <li><a href="#" aria-label="Dribbble profile"><svg width="16" height="16" aria-hidden="true"><use href="#icon-dribbble"/></svg></a></li>
-            <li><a href="#" aria-label="GitHub profile"><svg width="16" height="16" aria-hidden="true"><use href="#icon-github"/></svg></a></li>
-          </ul>
+          <div class="contact-list">
+            <a href="mailto:ashishardeshana9@gmail.com"
+              ><img src="assets/icons/Email.svg" alt="" /><span
+                >ashishardeshana9@gmail.com</span
+              ></a
+            ><a href="tel:+919723071085"
+              ><img src="assets/icons/Call.svg" alt="" /><span
+                >+91 9723071085</span
+              ></a
+            >
+            <div>
+              <img src="assets/icons/Address.svg" alt="" /><span
+                >Ahmedabad, Gujarat, India</span
+              >
+            </div>
+          </div>
+          <div class="socials">
+            <a
+              href="https://www.linkedin.com/in/ashish-ardeshana-309378121/"
+              target="_blank"
+              rel="noopener"
+              ><img src="assets/icons/linkedin.svg" alt="LinkedIn" /></a
+            ><a
+              href="https://www.behance.net/ashishardeshana9"
+              target="_blank"
+              rel="noopener"
+              ><img src="assets/icons/behance.svg" alt="Behance" /></a
+            ><a
+              href="https://dribbble.com/ashish-ardeshana"
+              target="_blank"
+              rel="noopener"
+              ><img src="assets/icons/dribbble.svg" alt="Dribbble" /></a
+            ><a
+              href="https://github.com/ashsihardesshana"
+              target="_blank"
+              rel="noopener"
+              ><img src="assets/icons/Github.svg" alt="GitHub"
+            /></a>
+          </div>
         </div>
       </aside>
-
-      <!-- =============================================
-           MAIN CONTENT
-      ============================================== -->
-      <main class="col-lg-9 main-col">
-
-        <!-- ============ HERO ============ -->
-        <section id="home" class="section hero-section" aria-labelledby="hero-heading">
-          <p class="eyebrow"><span class="eyebrow__dot"></span>Introduce</p>
-          <h2 id="hero-heading" class="hero-title">
-            Hi, I'm <span class="text-accent">Ashish Ardeshana</span>,
-            <span class="hero-title__sub">UI/UX Designer &amp; Front-end Developer</span>
-          </h2>
-          <p class="hero-desc">
-            I design and develop modern, user-friendly mobile apps, responsive websites, and web applications
-            with a strong focus on user experience, clean interfaces, and pixel-perfect front-end implementation.
-          </p>
-
-          <div class="hero-stats">
-            <div class="hero-stats__item">
-              <span class="hero-stats__num">10+</span>
-              <span class="hero-stats__label">Years Experience</span>
-            </div>
-            <div class="hero-stats__item">
-              <span class="hero-stats__num">150+</span>
-              <span class="hero-stats__label">Projects Delivered</span>
-            </div>
+      <main class="content">
+        <section id="introduce" class="section section-intro reveal">
+          <div class="section-label">
+            <img src="assets/icons/Introduce.svg" alt="" />INTRODUCE
+          </div>
+          <div class="intro-copy">
+            <h1>Hi, I'm <span>Ashish Ardeshana</span>,</h1>
+            <h2>UI/UX Designer &amp; Front-end Developer</h2>
+            <p>
+              I design and develop modern, user-friendly mobile apps, responsive
+              websites, and web applications with a strong focus on user
+              experience, clean interfaces, and pixel-perfect front-end
+              implementation.
+            </p>
+          </div>
+          <div class="facts">
+            <div><strong>10+</strong><span>Years Experience</span></div>
+            <div><strong>150+</strong><span>Projects Delivered</span></div>
           </div>
         </section>
-
-        <!-- ============ ABOUT ============ -->
-        <section id="about" class="section" aria-labelledby="about-heading">
-          <p class="eyebrow"><span class="eyebrow__dot"></span>About Me</p>
-          <h2 id="about-heading" class="section-title">
-            Every great digital experience starts with <span class="text-accent">understanding users.</span>
-          </h2>
-          <p class="section-desc">
-            I'm a UI/UX Designer &amp; Front-end Developer with over 10+ years of experience creating intuitive
-            digital products. I specialize in designing and developing responsive websites, mobile applications,
-            dashboards, SaaS platforms, and enterprise solutions using modern UI principles and front-end technologies.
-          </p>
+        <section id="about" class="section reveal">
+          <div class="section-label">
+            <img src="assets/icons/about-me.svg" alt="" />ABOUT ME
+          </div>
+          <div class="about-copy">
+            <h2>
+              Every great digital experience starts with
+              <span>understanding users.</span>
+            </h2>
+            <p>
+              I'm a UI/UX Designer &amp; Front-end Developer with over 10+ years
+              of experience creating intuitive digital products. I specialize in
+              designing and developing responsive websites, mobile applications,
+              dashboards, SaaS platforms, and enterprise solutions using modern
+              UI principles and front-end technologies.
+            </p>
+          </div>
         </section>
-
-        <!-- ============ RESUME / TIMELINE ============ -->
-        <section id="resume" class="section" aria-labelledby="resume-heading">
-          <p class="eyebrow"><span class="eyebrow__dot"></span>Resume</p>
-          <h2 id="resume-heading" class="section-title">Education &amp; <span class="text-accent">Experience</span></h2>
-
-          <ol class="timeline list-unstyled">
-            <li class="timeline__item">
-              <span class="timeline__date">Nov 2015 – Present</span>
-              <h3 class="timeline__title">Senior Software Engineer</h3>
-              <p class="timeline__org">Talvasoft, Ahmedabad</p>
-            </li>
-            <li class="timeline__item">
-              <span class="timeline__date">Nov 2014 – Oct 2015</span>
-              <h3 class="timeline__title">UI Designer &amp; Front-end Developer</h3>
-              <p class="timeline__org">Web Code Game, Ahmedabad</p>
-            </li>
-            <li class="timeline__item">
-              <span class="timeline__date">2013 – 2014</span>
-              <h3 class="timeline__title">Professional UI/UX &amp; Graphic Design Training</h3>
-              <p class="timeline__org">Eyecone Multimedia – Education Institute, Ahmedabad</p>
-            </li>
-            <li class="timeline__item">
-              <span class="timeline__date">2010 – 2013</span>
-              <h3 class="timeline__title">Bachelor of Commerce</h3>
-              <p class="timeline__org">Saurashtra University, Rajkot</p>
-            </li>
-          </ol>
+        <section id="resume" class="section reveal">
+          <div class="section-label">
+            <img src="assets/icons/Resume.svg" alt="" />RESUME
+          </div>
+          <h2 class="section-title">Education &amp; <span>Experience</span></h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="dot"></div>
+              <div>
+                <time>Nov 2015 – Present</time>
+                <h3>Senior Software Engineer</h3>
+                <p>Tatvasoft, Ahmedabad</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="dot"></div>
+              <div>
+                <time>Nov 2014 – Oct 2015</time>
+                <h3>UI Designer &amp; Front-end Developer</h3>
+                <p>Web Code Genie, Ahmedabad</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="dot"></div>
+              <div>
+                <time>2013 – 2014</time>
+                <h3>Professional UI/UX &amp; Graphic Design Training</h3>
+                <p>Eyecone Multimedia – Education Institute, Ahmedabad</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="dot"></div>
+              <div>
+                <time>2010 – 2013</time>
+                <h3>Bachelor of Commerce</h3>
+                <p>Saurashtra University, Rajkot</p>
+              </div>
+            </article>
+          </div>
         </section>
-
-        <!-- ============ SERVICES / SPECIALIZATIONS ============ -->
-        <section id="services" class="section" aria-labelledby="services-heading">
-          <p class="eyebrow"><span class="eyebrow__dot"></span>Services</p>
-          <h2 id="services-heading" class="section-title">My <span class="text-accent">Specializations</span></h2>
-
+        <section id="services" class="section reveal">
+          <div class="section-label">
+            <img src="assets/icons/Services.svg" alt="" />SERVICES
+          </div>
+          <h2 class="section-title">My <span>Specializations</span></h2>
           <div class="services-list">
-
             <article class="service-card">
-              <div class="service-card__body">
-                <h3 class="service-card__title">UI/UX Design</h3>
-                <p class="service-card__desc">Creating intuitive, user-centered experiences through research, wireframes, prototypes, and modern interface design.</p>
-                <span class="service-card__tag">150+ Projects</span>
+              <div>
+                <h3>UI/UX Design</h3>
+                <p>
+                  Creating intuitive, user-centered experiences through
+                  research, wireframes, prototypes, and modern interface design.
+                </p>
+                <strong>150+ Projects</strong>
               </div>
-              <div class="service-card__art service-card__art--uiux" aria-hidden="true">
-                <span class="service-card__art-label">UI/UX</span>
-                <span class="chip chip--yellow"></span>
-                <span class="chip chip--blue"><svg width="14" height="14"><use href="#icon-user"/></svg></span>
-                <span class="chip chip--dark"></span>
-              </div>
+              <img src="assets/icons/UX-Design.svg" alt="UI/UX Design" />
             </article>
-
             <article class="service-card">
-              <div class="service-card__body">
-                <h3 class="service-card__title">Website &amp; Mobile App Design</h3>
-                <p class="service-card__desc">Designing responsive websites and intuitive mobile applications with modern interfaces and seamless user experiences.</p>
-                <span class="service-card__tag">100+ Websites &amp; Apps</span>
+              <div>
+                <h3>Website &amp; Mobile App Design</h3>
+                <p>
+                  Designing responsive websites and intuitive mobile
+                  applications with modern interfaces and seamless user
+                  experiences.
+                </p>
+                <strong>100+ Websites &amp; Apps</strong>
               </div>
-              <div class="service-card__art service-card__art--web" aria-hidden="true">
-                <span class="chip chip--blue chip--wide"></span>
-                <span class="chip chip--light chip--tall"></span>
-                <span class="chip chip--dark chip--wide"></span>
-              </div>
+              <img src="assets/icons/app_design.svg" alt="App Design" />
             </article>
-
             <article class="service-card">
-              <div class="service-card__body">
-                <h3 class="service-card__title">Design Systems &amp; Prototyping</h3>
-                <p class="service-card__desc">Building reusable components, wireframes, interactive prototypes, and scalable design systems.</p>
-                <span class="service-card__tag">Scalable Design Systems</span>
+              <div>
+                <h3>Design Systems &amp; Prototyping</h3>
+                <p>
+                  Building reusable components, wireframes, interactive
+                  prototypes, and scalable design systems.
+                </p>
+                <strong>Scalable Design Systems</strong>
               </div>
-              <div class="service-card__art service-card__art--ds" aria-hidden="true">
-                <span class="node node--1"></span>
-                <span class="node node--2"></span>
-                <span class="node node--3"></span>
-                <span class="node node--4"></span>
-              </div>
+              <img src="assets/icons/Prototyping.svg" alt="Prototyping" />
             </article>
-
             <article class="service-card">
-              <div class="service-card__body">
-                <h3 class="service-card__title">Front-end Development</h3>
-                <p class="service-card__desc">Transforming UI designs into responsive, pixel-perfect websites using HTML5, CSS3, Bootstrap, Tailwind CSS, JavaScript, jQuery, and React.</p>
-                <span class="service-card__tag">11+ Years Experience</span>
+              <div>
+                <h3>Front-end Development</h3>
+                <p>
+                  Transforming UI designs into responsive, pixel-perfect
+                  websites using HTML5, CSS3, Bootstrap, Tailwind CSS,
+                  JavaScript, jQuery, and React.
+                </p>
+                <strong>11+ Years Experience</strong>
               </div>
-              <div class="service-card__art service-card__art--fe" aria-hidden="true">
-                <span class="chip chip--teal chip--wide"></span>
-                <span class="chip chip--outline chip--wide"></span>
-              </div>
+              <img
+                src="assets/icons/Front-end Development.svg"
+                alt="Front-end Development"
+              />
             </article>
-
           </div>
         </section>
-
-        <!-- ============ SKILLS / ADVANTAGES ============ -->
-        <section id="skills" class="section" aria-labelledby="skills-heading">
-          <p class="eyebrow"><span class="eyebrow__dot"></span>My Skills</p>
-          <h2 id="skills-heading" class="section-title">My <span class="text-accent">Advantages</span></h2>
-
-          <ul class="skills-grid list-unstyled">
-            <li class="skill-badge">
-              <span class="skill-badge__icon skill-badge__icon--figma" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 2h4a3 3 0 0 1 0 6H9z" fill="#F24E1E"/><path d="M9 8h4a3 3 0 0 1 0 6H9z" fill="#A259FF"/><path d="M9 14h4a3 3 0 0 1 0 6H9z" fill="#0ACF83"/><circle cx="6.5" cy="5" r="2.5" fill="#FF7262"/><circle cx="6.5" cy="11" r="2.5" fill="#1ABCFE"/></svg>
-              </span>
-              <span class="skill-badge__pct">95%</span>
-              <span class="skill-badge__label">Figma</span>
-            </li>
-            <li class="skill-badge">
-              <span class="skill-badge__icon skill-badge__icon--ps" aria-hidden="true">Ps</span>
-              <span class="skill-badge__pct">90%</span>
-              <span class="skill-badge__label">Adobe Photoshop</span>
-            </li>
-            <li class="skill-badge">
-              <span class="skill-badge__icon skill-badge__icon--ai" aria-hidden="true">Ai</span>
-              <span class="skill-badge__pct">85%</span>
-              <span class="skill-badge__label">Adobe Illustrator</span>
-            </li>
-            <li class="skill-badge">
-              <span class="skill-badge__icon skill-badge__icon--jitter" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="m6 4 12 8-12 8Z"/></svg>
-              </span>
-              <span class="skill-badge__pct">95%</span>
-              <span class="skill-badge__label">Jitter</span>
-            </li>
-            <li class="skill-badge">
-              <span class="skill-badge__icon skill-badge__icon--html" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M4 3h16l-1.5 16L12 21l-6.5-2L4 3Z"/><path d="M7 7h10l-.4 4.5H8.9M7.4 11.5.7 4.5h9.7l-.4 4.5"/></svg>
-              </span>
-              <span class="skill-badge__pct">95%</span>
-              <span class="skill-badge__label">HTML5</span>
-            </li>
-            <li class="skill-badge">
-              <span class="skill-badge__icon skill-badge__icon--css" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M4 3h16l-1.5 16L12 21l-6.5-2L4 3Z"/><path d="M17 7H7l.3 3.5H16l-.4 4L12 15.5l-3.6-1 -.2-2"/></svg>
-              </span>
-              <span class="skill-badge__pct">95%</span>
-              <span class="skill-badge__label">CSS3</span>
-            </li>
-            <li class="skill-badge">
-              <span class="skill-badge__icon skill-badge__icon--js" aria-hidden="true">JS</span>
-              <span class="skill-badge__pct">70%</span>
-              <span class="skill-badge__label">JavaScript &amp; jQuery</span>
-            </li>
-            <li class="skill-badge">
-              <span class="skill-badge__icon skill-badge__icon--react" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.3"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.8" fill="#61DAFB"/></svg>
-              </span>
-              <span class="skill-badge__pct">60%</span>
-              <span class="skill-badge__label">React</span>
-            </li>
-          </ul>
+        <section id="skills" class="section reveal">
+          <div class="section-label">
+            <img src="assets/icons/my-skills.svg" alt="" />MY SKILLS
+          </div>
+          <h2 class="section-title">My <span>Advantages</span></h2>
+          <div class="skills-grid">
+            <div class="skill">
+              <div class="skill-inner">
+                <img src="assets/icons/Figma.svg" alt="Figma" /><strong
+                  >95%</strong
+                >
+              </div>
+              <span>Figma</span>
+            </div>
+            <div class="skill">
+              <div class="skill-inner">
+                <img
+                  src="assets/icons/adobe-photoshop-icon 2.svg"
+                  alt="Adobe Photoshop"
+                /><strong>90%</strong>
+              </div>
+              <span>Adobe Photoshop</span>
+            </div>
+            <div class="skill">
+              <div class="skill-inner">
+                <img
+                  src="assets/icons/adobe-illustrator-icon 1.svg"
+                  alt="Adobe Illustrator"
+                /><strong>85%</strong>
+              </div>
+              <span>Adobe Illustrator</span>
+            </div>
+            <div class="skill">
+              <div class="skill-inner">
+                <img src="assets/icons/Jitter.svg" alt="Jitter" /><strong
+                  >95%</strong
+                >
+              </div>
+              <span>Jitter</span>
+            </div>
+            <div class="skill">
+              <div class="skill-inner">
+                <img src="assets/icons/HTML5.svg" alt="HTML5" /><strong
+                  >95%</strong
+                >
+              </div>
+              <span>HTML5</span>
+            </div>
+            <div class="skill">
+              <div class="skill-inner">
+                <img src="assets/icons/CSS3.svg" alt="CSS3" /><strong
+                  >95%</strong
+                >
+              </div>
+              <span>CSS3</span>
+            </div>
+            <div class="skill">
+              <div class="skill-inner">
+                <img
+                  src="assets/icons/JavaScript.svg" alt="JavaScript & jQuery"
+                /><strong>70%</strong>
+              </div>
+              <span>JavaScript &amp; jQuery</span>
+            </div>
+            <div class="skill">
+              <div class="skill-inner">
+                <img src="assets/icons/React.svg" alt="React" /><strong
+                  >60%</strong
+                >
+              </div>
+              <span>React</span>
+            </div>
+          </div>
         </section>
-
-        <!-- ============ PORTFOLIO ============ -->
-        <section id="portfolio" class="section section--last" aria-labelledby="portfolio-heading">
-          <p class="eyebrow"><span class="eyebrow__dot"></span>Portfolio</p>
-          <h2 id="portfolio-heading" class="section-title">Featured <span class="text-accent">Projects</span></h2>
-
+        <section id="portfolio" class="section reveal">
+          <div class="section-label">
+            <img src="assets/icons/Portfolio.svg" alt="" />PORTFOLIO
+          </div>
+          <h2 class="section-title">Featured <span>Projects</span></h2>
           <div class="portfolio-list">
-
             <article class="portfolio-card">
-              <div class="portfolio-card__thumb portfolio-card__thumb--studyhub">
-                <!-- Replace with /assets/images/portfolio/studyhub.jpg -->
-                <div class="portfolio-card__tags">
-                  <span class="tag-pill">Figma</span>
-                  <span class="tag-pill">Website</span>
-                  <span class="tag-pill">React</span>
+              <div class="portfolio-image">
+                <img
+                  src="assets/images/StudyHub.jpg"
+                  alt="StudyHub eLearning Platform"
+                />
+                <div class="tags">
+                  <span>Figma</span><span>Website</span><span>React</span>
                 </div>
               </div>
-              <p class="portfolio-card__caption">
-                <strong>StudyHub</strong> eLearning Platform – Modern LMS platform for online learning, course management, and student engagement.
+              <p>
+                <b>StudyHub</b> eLearning Platform – Modern LMS platform for
+                online learning, course management, and student engagement.
               </p>
             </article>
-
             <article class="portfolio-card">
-              <div class="portfolio-card__thumb portfolio-card__thumb--homenza">
-                <!-- Replace with /assets/images/portfolio/homenza.jpg -->
-                <div class="portfolio-card__tags">
-                  <span class="tag-pill">Adobe Photoshop</span>
-                  <span class="tag-pill">Web App</span>
-                  <span class="tag-pill">React</span>
+              <div class="portfolio-image">
+                <img
+                  src="assets/images/Homenza.jpg"
+                  alt="Homenza Home Services Marketplace"
+                />
+                <div class="tags">
+                  <span>Adobe Photoshop</span><span>Web App</span
+                  ><span>React</span>
                 </div>
               </div>
-              <p class="portfolio-card__caption">
-                <strong>Homenza</strong> Home Services Marketplace – A responsive platform connecting users with trusted home service professionals.
+              <p>
+                <b>Homenza</b> Home Services Marketplace – A responsive platform
+                connecting users with trusted home service professionals.
               </p>
             </article>
-
             <article class="portfolio-card">
-              <div class="portfolio-card__thumb portfolio-card__thumb--chatbot">
-                <!-- Replace with /assets/images/portfolio/ai-chatbot.jpg -->
-                <div class="portfolio-card__tags">
-                  <span class="tag-pill">UI/UX</span>
-                  <span class="tag-pill">AI</span>
-                  <span class="tag-pill">SaaS</span>
+              <div class="portfolio-image">
+                <img
+                  src="assets/images/AI-Powered Conversational Chatbot.jpg"
+                  alt="AI-Powered Conversational Chatbot"
+                />
+                <div class="tags">
+                  <span>UI/UX</span><span>AI</span><span>SaaS</span>
                 </div>
               </div>
-              <p class="portfolio-card__caption">
-                <strong>AI-Powered Conversational Chatbot</strong> – Context-aware, multi-turn conversations with enterprise-grade security.
+              <p>
+                <b>AI-Powered Conversational Chatbot</b> – Context-aware,
+                multi-turn conversations with enterprise-grade security
               </p>
             </article>
-
             <article class="portfolio-card">
-              <div class="portfolio-card__thumb portfolio-card__thumb--interior">
-                <!-- Replace with /assets/images/portfolio/interior-design.jpg -->
-                <div class="portfolio-card__tags">
-                  <span class="tag-pill">Figma</span>
-                  <span class="tag-pill">Website</span>
-                  <span class="tag-pill">UI/UX</span>
-                  <span class="tag-pill">Responsive</span>
+              <div class="portfolio-image">
+                <img
+                  src="assets/images/Interior Design Website.jpg"
+                  alt="Interior Design Website"
+                />
+                <div class="tags">
+                  <span>Figma</span><span>Website</span><span>UI/UX</span
+                  ><span>Responsive</span>
                 </div>
               </div>
-              <p class="portfolio-card__caption">
-                <strong>Interior Design Website</strong> – Modern interior design website showcasing premium services, projects, and elegant living spaces.
+              <p>
+                <b>Interior Design Website</b> -
+                <span
+                  >Modern interior design website showcasing premium services,
+                  projects, and elegant living spaces.</span
+                >
               </p>
             </article>
-
           </div>
         </section>
-
-        <!-- ============ FOOTER ============ -->
-        <footer class="site-footer">
-          <p>&copy; <span id="year"></span> Ashish Ardeshana. All rights reserved.</p>
-          <a href="mailto:ashishardeshana9@gmail.com" class="footer-cta">
-            Let's work together
-            <svg width="16" height="16" aria-hidden="true"><use href="#icon-arrow"/></svg>
-          </a>
-        </footer>
-
       </main>
+      <nav class="side-nav" aria-label="Section navigation">
+        <a href="#introduce" class="active" data-section="introduce">
+            <img class="Default" src="assets/icons/Introduce.svg" alt="Introduce" />
+            <img class="active" src="assets/icons/Introduce-a.svg" alt="Introduce" />
+        </a\>
+        <a href="#about" data-section="about">
+            <img class="Default" src="assets/icons/about-me.svg" alt="About Me" />
+            <img class="active" src="assets/icons/about-me-a.svg" alt="About Me" />
+         </a>
+         <a href="#resume" data-section="resume">
+            <img class="Default" src="assets/icons/Resume.svg" alt="Resume" />
+            <img class="active" src="assets/icons/Resume-a.svg" alt="Resume" />
+        </a>
+        <a href="#services" data-section="services">
+            <img class="Default" src="assets/icons/Services.svg" alt="Services" />
+            <img class="active" src="assets/icons/Services-a.svg" alt="Services" />
+        </a>
+        <a href="#skills" data-section="skills">
+            <img class="Default" src="assets/icons/my-skills.svg" alt="My Skills" />
+            <img class="active" src="assets/icons/my-skills-a.svg" alt="My Skills" />
+        </a>
+        <a href="#portfolio" data-section="portfolio">
+            <img class="Default" src="assets/icons/Portfolio.svg" alt="Portfolio"/>
+            <img class="active" src="assets/icons/Portfolio-a.svg" alt="Portfolio"/>
+        </a>
+      </nav>
+      <nav class="mobile-nav" aria-label="Mobile section navigation">
+        <a href="#introduce" class="active" data-section="introduce">
+            <img class="Default" src="assets/icons/Introduce.svg" alt="Introduce" />
+            <img class="active" src="assets/icons/Introduce-a.svg" alt="Introduce" />
+        </a>
+        <a href="#about" data-section="about">
+           <img class="Default" src="assets/icons/about-me.svg" alt="About Me" />
+           <img class="active" src="assets/icons/about-me-a.svg" alt="About Me" />
+        </a>
+        <a href="#resume" data-section="resume">
+            <img class="Default" src="assets/icons/Resume.svg" alt="Resume" />
+            <img class="active" src="assets/icons/Resume-a.svg" alt="About Me" />
+        </a>
+        <a href="#services" data-section="services">
+          <img class="Default" src="assets/icons/Services.svg" alt="Services" />
+          <img class="active" src="assets/icons/Services-a.svg" alt="Services" />
+        </a>
+        <a href="#skills" data-section="skills">
+          <img class="Default" src="assets/icons/my-skills.svg" alt="My Skills" />
+          <img class="active" src="assets/icons/my-skills-a.svg" alt="My Skills" />
+        </a>
+        <a href="#portfolio" data-section="portfolio">
+          <img class="Default" src="assets/icons/Portfolio.svg" alt="Portfolio"/>
+          <img class="active" src="assets/icons/Portfolio-a.svg" alt="Portfolio"/>
+        </a>
+      </nav>
     </div>
-  </div>
-</div>
-
-<script src="js/script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
